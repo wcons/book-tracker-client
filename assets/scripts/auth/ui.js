@@ -31,9 +31,24 @@ const onSignInFailure = responseData => {
   $('#sign-in input.formclear').val('')
 }
 
+const onChangePasswordSuccess = responseData => {
+  $('#message').text('Changed Password Successfully!')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  $('#change-pw input.formclear').val('')
+}
+const onChangePasswordFailure = responseData => {
+  $('#message').text('Change Password Failed!')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  $('#change-pw input.formclear').val('')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure
 }
