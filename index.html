@@ -12,6 +12,30 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <form id="sign-up">
+        <input class="formclear" type="email" name="credentials[email]" placeholder="EMail" />
+        <input class="formclear" type="password" name="credentials[password]" placeholder="Password" />
+        <input class="formclear" type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" />
+        <input type="submit" value="Sign Up" />
+      </form>
+
+      <form id="sign-in">
+        <input class="formclear" type="email" name="credentials[email]" placeholder="EMail" />
+        <input class="formclear" type="password" name="credentials[password]" placeholder="Password" />
+        <input type="submit" value="Sign In" />
+      </form>
+
+      <form id="change-pw" class="hidden">
+        <input class="formclear" type="password" name="passwords[old]" placeholder="Old Password" />
+        <input class="formclear" type="password" name="passwords[new]" placeholder="New Password" />
+        <input type="submit" value="Change Password" />
+      </form>
+
+      <form id="sign-out">
+        <input type="submit" value="Sign Out" />
+      </form>
+
+      <h3 id="message"></h3>
+
     </body>
 </html>
