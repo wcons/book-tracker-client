@@ -39,7 +39,6 @@ const signOut = () => {
     }
   })
 }
-
 module.exports = {
   signUp,
   signIn,
