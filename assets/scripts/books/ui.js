@@ -3,7 +3,6 @@
 const showBooksTemplate = require('../templates/books.handlebars')
 
 const onGetBooksSuccess = (data) => {
-  console.log(data)
   const showBooksHtml = showBooksTemplate({ books: data.books })
   $('#content').html(showBooksHtml)
 }
@@ -24,9 +23,15 @@ const onCreateBookFailure = responseData => {
   $('#message').addClass('failure')
   $('#createBook input.formclear').val('')
 }
+
+const clearBooks = () => {
+  $('.content').empty()
+}
+
 module.exports = {
   onGetBooksSuccess,
   failure,
   onCreateBookSuccess,
-  onCreateBookFailure
+  onCreateBookFailure,
+  clearBooks
 }

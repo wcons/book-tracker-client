@@ -11,6 +11,11 @@ const onGetBooks = event => {
     .catch(ui.failure)
 }
 
+const onClearBooks = (event) => {
+  event.preventDefault()
+  ui.clearBooks()
+}
+
 const onCreateBook = event => {
   event.preventDefault()
 
@@ -22,7 +27,18 @@ const onCreateBook = event => {
     .catch(ui.onCreateBookFailure)
 }
 
+const onDeleteBook = event => {
+  const id = $(event.target).data('id')
+  api.deleteBook(id)
+    .then(function (data) {
+      onGetBooks(event)
+    })
+    .catch(ui.failure)
+}
+
 module.exports = {
   onGetBooks,
-  onCreateBook
+  onCreateBook,
+  onDeleteBook,
+  onClearBooks
 }
