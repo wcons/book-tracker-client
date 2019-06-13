@@ -1,8 +1,21 @@
 {{#each books as |book|}}
-  <div class="book">
+  <div class="book" id="{{book.id}}">
+    <div class="book_info">
     <h5>{{title}}</h5>
     <h5>{{author}}</h5>
     <h5>{{year_published}}</h5>
-  </br>
+      <button class="openForm" data-id="{{book.id}}">Edit</button> <button class="removeBook" data-id="{{book.id}}">Remove</button>
+    </div>
+
+      <div class="book_update hidden">
+      <form class="updateBook" data-id="{{book.id}}">
+        <input class="formclear" type="text" name="book[title]" value="{{title}}" />
+        <input class="formclear" type="text" name="book[author]" value="{{author}}" />
+        <input class="formclear" type="text" name="book[year_published]" value="{{year_published}}" />
+        <input type="submit" value="Save" />
+      </form>
+
+      </div>
   </div>
+  <hr>
   {{/each}}

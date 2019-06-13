@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Book Tracker Client</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <h2>Book Tracker</h2>
       <form id="sign-up">
         <input class="formclear" type="email" name="credentials[email]" placeholder="EMail" />
         <input class="formclear" type="password" name="credentials[password]" placeholder="Password" />
@@ -31,20 +32,20 @@
         <input type="submit" value="Change Password" />
       </form>
 
-      <form id="sign-out">
+      <form id="sign-out" class='hidden'>
         <input type="submit" value="Sign Out" />
       </form>
 
       <h3 id="message"></h3>
 
-      <form id="createBook">
+      <form id="createBook" class="hidden">
         <input class="formclear" type="text" name="book[title]" placeholder="Title" />
         <input class="formclear" type="text" name="book[author]" placeholder="Author" />
         <input class="formclear" type="text" name="book[year_published]" placeholder="Year Published" />
         <input type="submit" value="Create Book" />
       </form>
 
-      <button id="getBooks">Get Books!</button>
+      <button id="getBooks" class="hidden">Get Books!</button><button id="clearBooks" class="hidden">Clear Books</button>
 
       <div id="content" class="content"></div>
 

@@ -11,6 +11,11 @@ const onGetBooks = event => {
     .catch(ui.failure)
 }
 
+const onClearBooks = (event) => {
+  event.preventDefault()
+  ui.clearBooks()
+}
+
 const onCreateBook = event => {
   event.preventDefault()
 
@@ -22,7 +27,37 @@ const onCreateBook = event => {
     .catch(ui.onCreateBookFailure)
 }
 
+const onUpdateBook = event => {
+  event.preventDefault()
+  console.log(event.target)
+  const id = $(event.target).data('id')
+  const form = event.target
+  const bookData = getFormFields(form)
+  api.updateBook(bookData, id)
+    .then(ui.onUpdateBookSuccess)
+    .catch(ui.onUpdateBookFailure)
+}
+
+const onDeleteBook = event => {
+  const id = $(event.target).data('id')
+  api.deleteBook(id)
+    .then(function (data) {
+      onGetBooks(event)
+    })
+    .catch(ui.failure)
+}
+
+const showForm = event => {
+  $(event.target).parent().parent().children('.book_update').show()
+  //  $('.book-info').hide()
+  // $('.book-update').show()
+}
+
 module.exports = {
   onGetBooks,
-  onCreateBook
+  onCreateBook,
+  onDeleteBook,
+  onClearBooks,
+  onUpdateBook,
+  showForm
 }

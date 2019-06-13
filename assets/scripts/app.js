@@ -15,5 +15,9 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
 
   $('#getBooks').on('click', bookEvents.onGetBooks)
+  $('#clearBooks').on('click', bookEvents.onClearBooks)
   $('#createBook').on('submit', bookEvents.onCreateBook)
+  $('#content').on('click', '.removeBook', bookEvents.onDeleteBook)
+  $('#content').on('submit', '.updateBook', bookEvents.onUpdateBook)
+  $('#content').on('click', '.openForm', bookEvents.showForm)
 })

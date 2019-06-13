@@ -22,6 +22,13 @@ const onSignInSuccess = responseData => {
   $('#message').addClass('success')
   $('#sign-in input.formclear').val('')
   store.user = responseData.user
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#change-pw').show()
+  $('#getBooks').show()
+  $('#createBook').show()
+  $('#clearBooks').show()
+  $('#sign-out').show()
 }
 
 const onSignInFailure = responseData => {
@@ -48,6 +55,14 @@ const onSignOutSuccess = responseData => {
   $('#message').text('Signed Out Successfully!')
   $('#message').removeClass()
   $('#message').addClass('success')
+  $('#sign-up').show()
+  $('#sign-in').show()
+  $('#change-pw').hide()
+  $('#getBooks').hide()
+  $('#clearBooks').hide()
+  $('#createBook').hide()
+  $('#sign-out').hide()
+  $('.content').empty()
 }
 
 const onSignOutFailure = responseData => {
