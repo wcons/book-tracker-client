@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 .failure {
-  color: #F00;
+  color: #f00;
 }
 
 .hidden {
@@ -9,5 +9,9 @@
 }
 
 .success {
-  color: #0F0;
+  color: #0f0;
+}
+
+h2 {
+  text-align: center;
 }
