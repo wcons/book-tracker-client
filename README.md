@@ -20,7 +20,6 @@ I originally chose a different idea, but decided to narrow my scope and keep it 
 I used the suggested schedule for the project, which was very helpful.
 
 *Links to wireframes and user stories*
-https://i.imgur.com/HXNeYIM.jpg
 
 https://i.imgur.com/7rTX0u2.jpg
 

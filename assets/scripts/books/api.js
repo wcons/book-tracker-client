@@ -22,7 +22,6 @@ const createBook = bookData => {
 }
 
 const updateBook = (bookData, id) => {
-  console.log(bookData)
   return $.ajax({
     url: config.apiUrl + '/books/' + id,
     method: 'PATCH',

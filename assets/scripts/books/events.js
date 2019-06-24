@@ -29,7 +29,6 @@ const onCreateBook = event => {
 
 const onUpdateBook = event => {
   event.preventDefault()
-  console.log(event.target)
   const id = $(event.target).data('id')
   const form = event.target
   const bookData = getFormFields(form)
