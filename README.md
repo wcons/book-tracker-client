@@ -2,6 +2,7 @@ https://wcons.github.io/book-tracker-client/
 
 https://infinite-reaches-30575.herokuapp.com/
 
+
 *Application Description*
 
 This application allows a user to keep track of their own list of books.
@@ -11,6 +12,7 @@ The user can log in to their account and enter, edit and remove books from a dat
 This repository contains the front-end code for the UI portion of the application.
 
 The back-end code can be viewed (here)[https://github.com/wcons/book-tracker-rails-api]
+
 
 *Technologies Used*
 
